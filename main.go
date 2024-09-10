@@ -37,7 +37,7 @@ func main() {
 
 	http.Handle("/", fileServer)
 
-	fmt.Printf("Serving files from %s on http://localhost:%s with no-cache headers\n", dir, *port)
+	fmt.Printf("Serving files from %s on http://localhost:%s \n", dir, *port)
 	err = http.ListenAndServe(":"+*port, nil)
 	if err != nil {
 		log.Fatalf("Failed to start server: %v", err)
